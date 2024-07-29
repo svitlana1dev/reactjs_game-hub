@@ -1,4 +1,5 @@
 import axios, { AxiosRequestConfig } from "axios";
+import env from "react-dotenv";
 
 export interface FetchResponse<T> {
   count: number;
@@ -9,7 +10,7 @@ export interface FetchResponse<T> {
 const axiosInstance = axios.create({
   baseURL: "https://api.rawg.io/api",
   params: {
-    key: "4371b52d0b0941359a9a129207b8e196",
+    key: env.RAWG_KEY,
   },
 });
 
